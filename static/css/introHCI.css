@@ -1,34 +1,263 @@
-/* applies to anything of class "example-class-selector" */
-.example-class-selector {
-	margin-top: 2em;
+div.navbar
+{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
 }
 
-/* applies to any <p> descendants of an element of class "example-class-selector" */
-.example-class-selector p {
-	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
-	color: #CC00AA;
+div.navbar ul.nav
+{
+  display: inline-block;
+  float: none;
 }
 
-/* this style exists to make it obvious that you've successfully linked
-   the CSS to the page. feel free to remove it once the link is working. */
-body {
-     border: 1px dotted gray;
-     padding: 20px;
+ul.nav > li 
+{
+  line-height: inherit;
+  padding: 0px 10px 0px 5px;
+  display: inline;
 }
 
-.jumbotron {
-	position: relative;
-	background: none;
+ul.nav > li > a
+{
+  display: inline;
+  color: inherit;
 }
 
-.jumbotron:after {
-     content:"";
-     background: url("http://lorempixel.com/1140/283");
-     opacity: 0.2;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     position: absolute;
-     z-index: -1;	
+ul.nav > li > a:hover
+{
+  background-color: inherit;
+  color: #00C9D0;
+}
+
+.anchor
+{
+  display: block;
+  height: 50px;
+  margin-top: -50px;
+  visibility: hidden;
+}
+
+.icon-med
+{
+  font-size: 20px;
+}
+
+div.section
+{
+  text-align: center;
+  padding: 30px 15px 30px 15px;
+  position: inherit;
+}
+
+div.main
+{
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+  background: #222222 url(../images/elainezhoulogo.png) 75% 50% no-repeat fixed; 
+  position: relative;
+  height: 100vh;
+}
+
+div.title-box{
+  background: inherit;
+  position: relative;
+  top: 60%;
+}
+
+div.back
+{
+  z-index: -1000;
+}
+
+h1.title-text{
+  text-transform: lowercase;
+  color: #00C9D0;
+  font-size: 48px;
+}
+
+a.contact{
+  color: #AAAAAA;
+}
+
+img.about-image{
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.about{
+  background-image: url('../images/lil_fiber.png');
+  background-repeat: repeat;
+/*  background-color: #EEEEEE;
+*/  position: relative;
+  top: 100%;
+}
+
+div.projects{
+  background-color: #EEEEEE;
+}
+
+div.project{
+    text-align: left;
+    padding: 15px;
+}
+
+.project a, a.email {
+  border-bottom:1px solid #888888;
+}
+
+.project a:hover, a.email:hover{
+  color: #00C9D0;
+  border-bottom:1px solid #222222;
+
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+h4.project-title{
+  text-transform: uppercase;
+}
+
+div.project-image img{
+  width: 100%;
+  max-width: 600px;
+}
+
+div.project-image{
+  width: auto;
+  height: auto;
+}
+
+.socialmedia a, .socialmedia a:visited {
+  font-family: 'social_font';
+  text-decoration: none;
+  font-size: 20px;
+  color: #222222;
+}
+
+.socialmedia a:hover{
+  color: #00C9D0;
+}
+
+div.footer{
+  text-align: right;
+  padding: 10px;
+  background-color: #222222;
+  color: white;
+}
+
+h1{
+  font-family:'nexa_boldregular', Helvetica, sans-serif;
+  font-weight: 400;
+  color: #00C9D0;
+  margin-bottom: 0px;
+}
+
+h2{
+  font-family:'Lato', Helvetica, sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+h3, h4{
+  font-family:'Lato', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #222222;
+  line-height: 120%;
+}
+
+p{
+  font-family:'Lato', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  letter-spacing: -0.1px;
+  padding: 10px 0px;
+}
+
+a{
+  color: #222222;
+}
+
+a:visited{
+  color: #53236B;
+}
+
+a:hover{
+  color: #00C9D0;
+  text-decoration: none;
+}
+
+span.xs-show
+{
+  display: none;
+}
+
+span.xs-hide
+{
+  display: inline;
+}
+
+
+@media only screen and (max-width: 768px), only screen and (max-device-width: 1020px) {
+  span.xs-hide {
+    display: none;
+  }
+  span.xs-show {
+    display: inline;
+  }
+  ul.nav {
+    margin-top: 4px;
+  }
+  div.first-content{
+    position: relative;
+    top: 400px;
+  }
+  div.main
+  {
+    background-size: 35% auto;
+  }
+  
+}
+
+@font-face {
+    font-family: 'nexa_boldregular';
+    src: url('../fonts/Nexa_Free_Bold-webfont.eot');
+    src: url('../fonts/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('../fonts/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'social_font';
+    src: url('../fonts/social_font.eot');
+    src: url('../fonts/social_font.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/social_font.ttf') format('truetype'),
+         url('../fonts/social_font.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html
+{
+  font-family: "Lato";
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
